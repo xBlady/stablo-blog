@@ -23,28 +23,14 @@ export default function Navbar(props) {
     {
       label: "Contact",
       href: "/contact"
-    }
-  ];
-
-  const rightmenu = [
+    },
     {
       label: "Archive",
       href: "/archive"
     },
-    {
-      label: "Pro Version",
-      href: "https://stablo-pro.web3templates.com/",
-      external: true,
-      badge: "new"
-    },
-    {
-      label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
-    }
   ];
 
-  const mobilemenu = [...leftmenu, ...rightmenu];
+  const mobilemenu = [...leftmenu, ];
 
   return (
     <Container>
@@ -53,29 +39,7 @@ export default function Navbar(props) {
           {({ open }) => (
             <>
               <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10">
-                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
-                  {leftmenu.map((item, index) => (
-                    <Fragment key={`${item.label}${index}`}>
-                      {item.children && item.children.length > 0 ? (
-                        <DropdownMenu
-                          menu={item}
-                          key={`${item.label}${index}`}
-                          items={item.children}
-                        />
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
-                          {item.label}
-                        </Link>
-                      )}
-                    </Fragment>
-                  ))}
-                </div>
-                <div className="flex w-full items-center justify-between md:w-auto">
+              <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
                     {props.logo ? (
                       <Image
@@ -86,7 +50,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Ideato
                       </span>
                     )}
                   </Link>
@@ -100,7 +64,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Ideato
                       </span>
                     )}
                   </Link>
@@ -127,9 +91,8 @@ export default function Navbar(props) {
                     </svg>
                   </Disclosure.Button>
                 </div>
-
-                <div className="order-2 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row">
-                  {rightmenu.map((item, index) => (
+                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
+                  {leftmenu.map((item, index) => (
                     <Fragment key={`${item.label}${index}`}>
                       {item.children && item.children.length > 0 ? (
                         <DropdownMenu
@@ -144,17 +107,14 @@ export default function Navbar(props) {
                           className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
                           rel={item.external ? "noopener" : ""}>
-                          <span> {item.label}</span>
-                          {item.badge && (
-                            <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
-                              {item.badge}
-                            </span>
-                          )}
+                          {item.label}
                         </Link>
                       )}
                     </Fragment>
                   ))}
                 </div>
+
+
               </div>
               <Disclosure.Panel>
                 <div className="order-2 -ml-4 mt-4 flex w-full flex-col items-center justify-start md:hidden">
