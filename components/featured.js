@@ -4,6 +4,7 @@ import { parseISO, format } from "date-fns";
 import { cx } from "@/utils/all";
 import Link from "next/link";
 
+
 export default function Featured({ post, pathPrefix }) {
   const imageProps = post?.mainImage
     ? urlForImage(post?.mainImage)
@@ -23,9 +24,7 @@ export default function Featured({ post, pathPrefix }) {
       {imageProps && (
         <div className="relative aspect-video md:aspect-auto">
           <Link
-            href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
-              post.slug.current
-            }`}>
+            href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${post.slug.current}`}>
             <Image
               src={imageProps.src}
               {...(post.mainImage.blurDataURL && {
@@ -36,17 +35,14 @@ export default function Featured({ post, pathPrefix }) {
               priority
               fill
               sizes="100vw"
-              className="object-cover"
-            />
+              className="object-cover" />
           </Link>
         </div>
       )}
 
       <div className="self-center px-5 pb-10">
         <Link
-          href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
-            post.slug.current
-          }`}>
+          href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${post.slug.current}`}>
           <div className="max-w-2xl">
             <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-white lg:leading-tight text-brand-primary lg:text-5xl">
               {post.title}
@@ -62,8 +58,7 @@ export default function Featured({ post, pathPrefix }) {
                         alt={post?.author?.name}
                         className="object-cover rounded-full"
                         fill
-                        sizes="100vw"
-                      />
+                        sizes="100vw" />
                     )}
                   </div>
                   <p className="text-gray-100 ">
