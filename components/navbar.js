@@ -39,14 +39,14 @@ export default function Navbar(props) {
           {({ open }) => (
             <>
               <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10 h-24">
-              <div className="flex w-full items-center justify-between md:w-auto h-24">
-                  <Link href="/" className="w-36 dark:hidden">
+              <div className="flex w-full items-center justify-between">
+                  <Link href="/" className="w-48 dark:hidden">
                     {props.logo ? (
-                      <Image
+                      <Image 
                         {...urlForImage(props.logo)}
                         alt="Logo"
                         priority={true}
-                        sizes="(max-width: 640px) 120vw, 400px"
+                        sizes="(max-width: 1040px) 100vw, 400px"
                       />
                     ) : (
                       <span className="block text-center">
@@ -60,7 +60,7 @@ export default function Navbar(props) {
                         {...urlForImage(props.logoalt)}
                         alt="Logo"
                         priority={true}
-                        sizes="(max-width: 640px) 120vw, 400px"
+                        sizes="(max-width: 1040px) 100vw, 400px"
                       />
                     ) : (
                       <span className="block text-center">
