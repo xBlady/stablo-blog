@@ -1,4 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import '../public/fonts/Clash-Display.css'; // Update the path accordingly
+
 
 class MyDocument extends Document {
   render() {
