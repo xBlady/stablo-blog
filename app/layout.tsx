@@ -1,4 +1,6 @@
 import "@/styles/tailwind.css";
+
+// import { ClashDisplay } from "./public/fonts/ClashDisplay-Variable"
 import { Providers } from "./providers";
 import { cx } from "@/utils/all";
 import { Inter, Lora } from "next/font/google";
