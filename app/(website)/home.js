@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
-import AboutSection from "@/components/aboutsection.js";  // Updated import path
+import AboutSection from "/components/aboutsection.js";  // Updated import path
 
 export default function Post({ posts }) {
   return (
