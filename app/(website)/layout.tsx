@@ -1,31 +1,25 @@
 import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
+
 import Navbar from "@/components/navbar";
 
 export async function sharedMetaData(params) {
   const settings = await getSettings();
 
   return {
-    // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
+      default: settings?.title || "Stablo - Blog Template for Next.js & Sanity CMS",
       template: "%s | Stablo"
     },
-    description:
-      settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
+    description: settings?.description || "Stablo - popular open-source next.js and sanity blog template",
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+    authors: [{ name: "Surjith", image: { asset: { _ref: "your_image_asset_id" } } }], // Replace "your_image_asset_id" with the actual asset ID for the image
     canonical: settings?.url,
     openGraph: {
       images: [
         {
-          url:
-            urlForImage(settings?.openGraphImage)?.src ||
-            "/img/opengraph.jpg",
+          url: urlForImage(settings?.openGraphImage)?.src || "/img/opengraph.jpg",
           width: 800,
           height: 600
         }
@@ -48,15 +42,17 @@ export async function generateMetadata({ params }) {
 
 export default async function Layout({ children, params }) {
   const settings = await getSettings();
+  const authors = [{ name: "Surjith", image: settings?.authorImage }]; // Modify this to get the appropriate author image data
+
   return (
     <>
       <Navbar {...settings} />
 
+      
+
       <div>{children}</div>
 
-      <Footer {...settings} />
+      <Footer id="footer" {...settings} />
     </>
   );
 }
-// enable revalidate for all pages in this layout
-// export const revalidate = 60;

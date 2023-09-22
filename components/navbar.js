@@ -16,10 +16,10 @@ export default function Navbar(props) {
       label: "Home",
       href: "/"
     },
-    {
-      label: "About",
-      href: "/about"
-    },
+    // {
+    //   label: "About",
+    //   href: "/about"
+    // },
     {
       label: "Contact",
       href: "/contact"
@@ -38,7 +38,7 @@ export default function Navbar(props) {
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10 h-24">
+              <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10 h-24 border-b-2 border-gray-100">
               <div className="flex w-full items-center justify-between">
                   <Link href="/" className="w-48 dark:hidden">
                     {props.logo ? (
