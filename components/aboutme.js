@@ -4,7 +4,7 @@ import Container from '@/components/container';
 
 const AboutSection = () => {
   // Default image path
-  const defaultImagePath = '/img/aboutsectionimage.svg'; // Path to your local image
+  const defaultImagePath = '/img/aboutsectionimage.png'; // Path to your local image
 
   return (
     <Container>
