@@ -15,8 +15,8 @@ module.exports = {
       },
       fontFamily: {
         // to change, update font in _document.js
-        sans: ["ClashDisplay-Variable, var(--font-inter)", ...defaultTheme.fontFamily.sans],
-        serif: ["var(--font-lora)", ...defaultTheme.fontFamily.serif],
+        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        serif: ["ClashDisplay-Variable, var(--font-lora)", ...defaultTheme.fontFamily.serif],
         stock: [defaultTheme.fontFamily.sans]
       },
       aspectRatio: {
