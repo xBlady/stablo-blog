@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
-import AboutSection from "@/components/aboutsection";  // Updated import path
+// import AboutSection from "@/components/aboutsection";  // Updated import path
 
 export default function Post({ posts }) {
   return (
     <>
-      <AboutSection /> {/* Added AboutSection */}
+      {/* <AboutSection /> */}
       {posts && (
         <Container>
           <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
