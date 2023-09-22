@@ -4,13 +4,13 @@ import Container from '@/components/container';
 
 const AboutSection = () => {
   // Default image path
-  const defaultImagePath = '/img/aboutsectionimage.png'; // Path to your local image
+  const defaultImagePath = '/img/aboutsectionimage.svg'; // Path to your local image
 
   return (
     <Container>
       <div className="flex flex-col md:flex-row items-center mb-16 mt-6 mr-0">
         <div
-          className="relative aspect-square overflow-hidden bg-gray-200 mb-4 md:mb-0 md:mr-16" // Change bg color if needed
+          className="relative aspect-square overflow-hidden mb-4 md:mb-0 md:mr-16" // Change bg color if needed
           style={{
             maxWidth: '100%',
             height: 'auto',
