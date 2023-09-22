@@ -1,20 +1,20 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import '../public/fonts/Clash-Display.css'; // Update the path accordingly
+// import Document, { Html, Head, Main, NextScript } from 'next/document';
+// import '../public/fonts/Clash-Display.css'; // Update the path accordingly
 
 
-class MyDocument extends Document {
-  render() {
-    return (
-      <Html>
-        <Head>
+// class MyDocument extends Document {
+//   render() {
+//     return (
+//       <Html>
+//         <Head>
 
-        </Head>
-        <body>
+//         </Head>
+//         <body>
 
-        </body>
-      </Html>
-    );
-  }
-}
+//         </body>
+//       </Html>
+//     );
+//   }
+// }
 
-export default MyDocument;
+// export default MyDocument;
