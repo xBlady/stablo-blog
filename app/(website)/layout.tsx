@@ -9,10 +9,10 @@ export async function sharedMetaData(params) {
 
   return {
     title: {
-      default: settings?.title || "Stablo - Blog Template for Next.js & Sanity CMS",
+      default: settings?.title || "Ideato",
       template: "%s | Stablo"
     },
-    description: settings?.description || "Stablo - popular open-source next.js and sanity blog template",
+    description: settings?.description || "Ideato",
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
     authors: [{ name: "Surjith", image: { asset: { _ref: "your_image_asset_id" } } }], // Replace "your_image_asset_id" with the actual asset ID for the image
     canonical: settings?.url,
@@ -26,7 +26,7 @@ export async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "Ideato",
       card: "summary_large_image"
     },
     robots: {
