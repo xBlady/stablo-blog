@@ -3,14 +3,25 @@ import Container from "@/components/container";
 import PostList from "@/components/postlist";
 import AboutSection from "@/components/aboutme";  // Updated import path
 
+const LineBreak = () => {
+  return (
+    <span className="hidden md:inline"><br /></span>
+  );
+};
+
 export default function Post({ posts }) {
   return (
     <>
       <AboutSection />
       {posts && (
         <Container>
-          <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
-            {posts.slice(0, 2).map(post => (
+          <div className="mb-8" style={{ width: '100%'}}>
+          <h1 className="text-3xl font-serif font-semibold mb-8" style={{ margin: '0' }}>
+            Portfolio projects
+          </h1>
+          </div>
+          <div className="grid gap-10 md:grid-cols-1 lg:gap-10 ">
+            {posts.slice(0, 1).map(post => (
               <PostList
                 key={post._id}
                 post={post}
@@ -20,7 +31,27 @@ export default function Post({ posts }) {
             ))}
           </div>
           <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
-            {posts.slice(2, 14).map(post => (
+            {posts.slice(3, 6).map(post => (
+              <PostList key={post._id} post={post} aspect="square" />
+            ))}
+          </div>
+          <div className="mt-16 mb-8" style={{ width: '100%'}}>
+          <h1 className="text-3xl font-serif font-semibold mb-8" style={{ margin: '0' }}>
+            Blog and my thoughts
+          </h1>
+          </div>
+          <div className="grid gap-10 md:grid-cols-1 lg:gap-10 mt-10 ">
+            {posts.slice(1, 2).map(post => (
+              <PostList
+                key={post._id}
+                post={post}
+                aspect="landscape"
+                preloadImage={true}
+              />
+            ))}
+          </div>
+          <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
+            {posts.slice(7, 10).map(post => (
               <PostList key={post._id} post={post} aspect="square" />
             ))}
           </div>

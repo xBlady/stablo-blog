@@ -21,6 +21,7 @@ export default function PostList({
   const AuthorimageProps = post?.author?.image
     ? urlForImage(post.author.image)
     : null;
+  // if (post.postType && post.postType.value === 'project') {
   return (
     <>
       <div
@@ -30,7 +31,7 @@ export default function PostList({
         )}>
         <div
           className={cx(
-            " overflow-hidden bg-gray-100 transition-all hover:scale-105   dark:bg-gray-800"
+            " overflow-hidden bg-gray-100 transition-all hover:scale-105   dark:bg-gray-800 flex-grow-0"
           )}>
           <Link
             className={cx(
@@ -140,7 +141,7 @@ export default function PostList({
                 dateTime={post?.publishedAt || post._createdAt}>
                 {format(
                   parseISO(post?.publishedAt || post._createdAt),
-                  "MMMM dd, yyyy"
+                  "dd MMM yyyy"
                 )}
               </time>
             </div>
@@ -149,4 +150,7 @@ export default function PostList({
       </div>
     </>
   );
+// } else {
+//   return null; // Don't render anything if post type is not "Project"
+// }
 }
