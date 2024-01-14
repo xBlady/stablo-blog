@@ -1,3 +1,5 @@
+
+
 import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
@@ -52,7 +54,7 @@ export default async function Layout({ children, params }) {
 
       <div>{children}</div>
 
-      <Footer id="footer" {...settings} />
+      <Footer {...settings} />
     </>
   );
 }

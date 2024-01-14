@@ -1,5 +1,9 @@
+"use client"
+
 import React from 'react';
 import Container from '@/components/container';
+import Link from 'next/link';
+import { useScroll } from "next/router";
 
 // This is your new LineBreak component
 const LineBreak = () => {
@@ -7,6 +11,7 @@ const LineBreak = () => {
     <span className="hidden md:inline"><br /></span>
   );
 };
+
 
 const AboutSection = () => {
   // Default image path
@@ -69,9 +74,9 @@ const AboutSection = () => {
                 Hire me
               </button>
             </a>
-            <a href="#footer" className="w-full mx-0"> {/* Change to an appropriate link */}
+            <a href="#stopka" className="w-full mx-0"> {/* Change to an appropriate link */}
               <button className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 w-full">
-                Sign up to newsletter
+              Sign up to newsletter
               </button>
             </a>
           </div>

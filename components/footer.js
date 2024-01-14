@@ -1,10 +1,11 @@
 import React from "react";
 import Container from "@/components/container";
 import ThemeSwitch from "@/components/themeSwitch";
+import Link from 'next/link';
 
 export default function Footer(props) {
   return (
-    <Container className="mt-10 border-t border-gray-100 dark:border-gray-800">
+    <Container id="footer" className="footer mt-10 border-t border-gray-100 dark:border-gray-800">
       <div className="flex items-center justify-center">
         <iframe
           src="https://bartpasierbek.substack.com/embed"
