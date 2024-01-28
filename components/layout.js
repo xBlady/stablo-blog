@@ -77,3 +77,11 @@ export default function Layout(props) {
     </>
   );
 }
+
+// Point 3: Add comments to explain the code
+// This is a React component that defines the layout of a web page
+// It uses Next.js for server-side rendering and SEO optimization
+// It also uses Sanity.io for fetching images and content from a headless CMS
+// It has two variants of navigation bars, depending on the props.alternate value
+// It renders the children components inside a div element
+// It also renders a footer component at the bottom of the page

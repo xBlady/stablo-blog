@@ -29,6 +29,19 @@ const leftmenu = [
   },
 ];
 
+function DropdownMenu({ menu, items }) {
+  return (
+    <div className="dropdown-menu">
+      {items.map((item, index) => (
+        <Link href={item.href} key={index}>
+          <a className="dropdown-item">{item.label}</a>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+
 export default function Navbar(props) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
