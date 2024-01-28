@@ -21,7 +21,7 @@ export default function Post({ posts }) {
             Portfolio projects
           </h1>
           </div>
-          <div className="grid md:grid-cols-3 gap-10 mt-10">
+          <div className="grid md:grid-cols-2 gap-10 mt-10">
           <div className="grid gap-10 col-span-2">
             {posts.slice(0, 1).map(post => (
               <PostList
@@ -32,14 +32,9 @@ export default function Post({ posts }) {
               />
             ))}
           </div>
-          <div className=" grid lg:gap-10">
-            {posts.slice(3, 4).map(post => (
-              <PostList key={post._id} post={post} aspect="custom" />
-            ))}
-          </div>
           </div>
           <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
-            {posts.slice(3, 6).map(post => (
+            {posts.slice(2, 5).map(post => (
               <PostList key={post._id} post={post} aspect="square" />
             ))}
           </div>

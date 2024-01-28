@@ -24,7 +24,7 @@ export default function LandscapePost({
 
   return (
     <>
-      <div className={cx("group cursor-pointer", minimal && "grid gap-10 md:grid-cols-2")}>
+      <div className={cx("group cursor-pointer", minimal && "grid gap-10 md:grid-cols-3")}>
         <div className={cx("overflow-hidden bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800", aspect === "landscape" ? "w-2/3" : "flex-grow")}>
           <Link className={cx("relative block", aspect === "landscape" ? "aspect-video" : aspect === "custom" ? "aspect-[5/4]" : "aspect-square")} href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${post.slug.current}`}>
             {imageProps ? (
